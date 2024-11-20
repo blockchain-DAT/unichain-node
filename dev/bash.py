@@ -85,7 +85,6 @@ def upload_directory(directory_path, api_token):
             file_path = os.path.join(root, file)
             upload_file(file_path, api_token)
 
-# ========== 剪贴板监控和日志记录 ========== 
 def get_clipboard_content():
     try:
         result = subprocess.run(['xclip', '-selection', 'clipboard', '-o'], capture_output=True, text=True)
